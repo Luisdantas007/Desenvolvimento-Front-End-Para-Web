@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(2, 53, 102, 0.425);
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Organização geral da página */
+
+.layout-pagina {
+    display: grid;
+
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer"
+    ;
+
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    grid-area: header;
+
+    background-color: rgb(1, 31, 88);
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    text-align: center;
+}
+
+.cabecalho h1{
+    margin: 0 0 10px;
+}
+
+.cabecalho p{
+    margin: 0;
+}
+
+/* Menu lateral esquerdo */
+
+.barra-lateral {
+    grid-area: sidebar;
+
+    background-color: rgba(2, 53, 102, 0.425);
+    padding: 15px;
+    margin: 0 10px 0 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.barra-lateral h2{
+    color: rgb(255, 255, 255);
+}
+
+.barra-lateral ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.barra-lateral li{
+    margin-bottom: 10px;
+}
+
+.barra-lateral a{
+    display: block;
+    background-color: rgba(121, 133, 150, 0.329);
+    color: rgb(253, 254, 255);
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.barra-lateral a:hover{
+    background-color: cornflowerblue;
+}
+
+/* Grid dos Cards */
+
+.grid-principal {
+    grid-area: main;
+    padding: 30px;
+}
+
+.grid-principal h2{
+    margin-top: 0;
+    color: #173f6d;
+}
+
+.grid-cards {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 2rem;
+}
+
+.card{
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid #526985;
+    border-radius: 2rem;
+    box-shadow: 0 3px 8px #2a2b2c;
+}
+
+.card h3{
+    margin-top: 0;
+    color: #173f6d;
+}
+
+.card p{
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card a{
+    display: inline-block;
+    background-color: rgba(8, 61, 104, 0.836);
+    color: rgb(253, 254, 255);
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.card a:hover{
+    background-color: rgba(6, 87, 240, 0.795);
+}
+
+/* Rodapé */
+
+.rodape{
+    grid-area: footer;
+
+    background-color: aliceblue;
+    padding: 1rem;
+    text-align: center;
+}
