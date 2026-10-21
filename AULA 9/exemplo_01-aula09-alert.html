@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript no head e no body</title>
+
+    <style>
+        .destaque{
+            color: crimson;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+    <script>
+      alert("O JavaScript do cabeçalho foi executado!");
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript incorporado</h1>
+
+    <p>Este conteúdo foi escrito diretamente com HTML</p>
+
+    <script>
+        document.write('<p class="destaque">Este conteúdo foi criado pelo JavaScript</p>');
+    </script>
+  </body>
+</html>
